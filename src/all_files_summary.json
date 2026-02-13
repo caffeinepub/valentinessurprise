@@ -1,0 +1,16 @@
+{
+  "backend/main.mo": "Minimal Motoko actor with no methods.",
+  "feature_evidence.json": "Feature evidence report linking the Valentine's CTA enhancement to affected files and components.",
+  "frontend-file-summaries.txt": "Prewritten summaries describing key frontend files and their purposes.",
+  "frontend/index.css": "Global Tailwind base variables defining color tokens and dark mode values.",
+  "frontend/index.html": "HTML entry point mounting the React app and loading main.tsx.",
+  "frontend/src/App.tsx": "Renders the ValentinesSurprise page as the main view.",
+  "frontend/src/components/ValentineDelightBurst.tsx": "Component generating animated floating heart particles with timed cleanup.",
+  "frontend/src/hooks/useActor.ts": "Hook creating a backend actor tied to Internet Identity and refreshing queries on identity change.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Internet Identity authentication context and provider handling login, identity loading, and state.",
+  "frontend/src/index.css": "Tailwind styles plus animation utilities including heart float and reveal effects.",
+  "frontend/src/main.tsx": "React entry point wiring QueryClient and InternetIdentityProvider around App.",
+  "frontend/src/pages/ValentinesSurprise.tsx": "Main Valentine's page with music playback, animated hero, love card, burst animation, and secret message trigger.",
+  "frontend/tailwind.config.js": "Configures Tailwind with dark mode, custom colors, animations, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Describes project state for building a Valentine-themed React page, listing features, architecture notes, and known issues."
+}

@@ -1,0 +1,51 @@
+{
+  "kind": "build_request",
+  "title": "Add a lovely surprise interaction when the CTA button is clicked",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-6",
+      "text": "Enhance the `ValentinesSurprise` CTA button click interaction to do something \"interesting\" and \"lovely\" in addition to the existing music-play fallback (e.g., trigger a celebratory heart/confetti-style animation and reveal an extra romantic message), while keeping all user-facing text in English.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Add more something interesting lovely when the button is clicked"
+        ]
+      },
+      "acceptanceCriteria": [
+        "When the user clicks the \"Forever Yours ❤️\" button, the UI shows a clearly noticeable, Valentine-themed delight interaction (e.g., floating hearts burst/confetti and/or a smooth animated reveal of an extra love note).",
+        "The existing behavior remains intact: if music is not playing and autoplay was blocked, clicking the CTA still attempts to start audio playback without runtime errors.",
+        "The delight interaction is safe to click repeatedly (no console errors, no runaway timers/DOM growth, and animation elements are cleaned up or capped).",
+        "All newly added user-facing text is in English.",
+        "Changes are limited to editable frontend files (do not modify any paths listed as immutable in system constraints)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any frontend files under the immutable paths listed in SYSTEM_CONTEXT (e.g., `frontend/src/main.tsx`, `frontend/src/hooks/useInternetIdentity.ts(x)`, `frontend/src/hooks/useActor.ts`, `frontend/src/components/ui/*`).",
+    "Keep the existing audio source URL unchanged: https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+    "Backend must remain single-actor Motoko; no new backend work is required for this request."
+  ],
+  "nonGoals": [
+    "Adding new routes or navigation beyond the existing single-page experience.",
+    "Adding third-party services or external APIs for effects.",
+    "Changing Internet Identity/authentication behavior."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

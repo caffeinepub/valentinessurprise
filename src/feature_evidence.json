@@ -1,0 +1,25 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-enhance-the-valentinessurprise-cta-button-click-interaction-to-do-something-interesting-and-lovely-in-addition-to-the-existing-music-play-fallback-e-g-trigger-a-celebratory-heart-confetti-style-animation-and-reveal-an-extra-romantic-message-while-keeping-all-user-facing-text-in-english",
+      "featureTitle": "Enhance the `ValentinesSurprise` CTA button click interaction to do something \"interesting\" and \"lovely\" in addition to the existing music-play fallback (e.g., trigger a celebratory heart/confetti-style animation and reveal an extra romantic message), while keeping all user-facing text in English.",
+      "files": [
+        "frontend/src/components/ValentineDelightBurst.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/ValentinesSurprise.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

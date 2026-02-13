@@ -1,0 +1,8 @@
+{
+  "frontend/src/App.tsx": "Main application component that renders the ValentinesSurprise page as the primary view.",
+  "frontend/src/pages/ValentinesSurprise.tsx": "Valentine's Day surprise page with animated hero section, love message card, background music with autoplay fallback, romantic styling, and enhanced CTA button that triggers floating hearts burst and reveals a secret romantic message on click while preserving existing audio playback behavior.",
+  "frontend/src/index.css": "Global styles with OKLCH color system customized for Valentine's theme with warm rose/pink accent colors and custom CSS animations including fade-in, slide-in, floating hearts burst, and secret message reveal effects.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended theme settings for the Valentine's application (unchanged from template).",
+  "frontend/package.json": "Package configuration with framer-motion dependency added for animations.",
+  "frontend/src/components/ValentineDelightBurst.tsx": "Self-contained React component that renders a burst of floating heart particles with CSS animations, automatic cleanup after animation completes, and built-in safety caps to prevent DOM growth on repeated clicks."
+}

@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Build a Valentine's Day surprise single-page React component with romantic styling, animations, and background music autoplay.",
+  "architectural_notes": [
+    "Frontend implemented as a React component using framer-motion for animations, lucide-react for icons, and shadcn/ui Button/Card components.",
+    "Background music via HTML <audio> element controlled with useRef/useEffect (attempt autoplay, set volume, loop)."
+  ],
+  "known_issues": [
+    "Autoplaying audio may be blocked by browsers without prior user interaction (play() may fail silently)."
+  ],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-add-a-new-react-typescript-page-component-named-valentinessurprise-that-matches-the-provided-structure-a-full-screen-pink-rose-gradient-background-an-animated-hero-heading-and-subtitle-an-animated-card-containing-a-heart-icon-and-love-message-a-cta-button-and-an-animated-footer-use-tailwind-css-classes-consistent-with-the-provided-snippet-and-use-shadcn-ui-button-card-and-cardcontent-components",
+      "title": "Add a new React + TypeScript page/component named `ValentinesSurprise` that matches the provided structure: a full-screen pink/rose gradient background, an animated hero heading and subtitle, an animated card containing a heart icon and love message, a CTA button, and an animated footer. Use Tailwind CSS classes consistent with the provided snippet, and use shadcn/ui `Button`, `Card`, and `CardContent` components.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-integrate-looping-background-music-using-an-audio-element-with-a-react-ref-and-attempt-autoplay-on-first-render-using-the-provided-source-url-implement-a-user-interaction-fallback-so-that-if-autoplay-is-blocked-by-the-browser-the-user-can-start-playback-by-clicking-the-cta-button-or-an-explicit-play-music-control-and-the-app-does-not-throw-runtime-errors",
+      "title": "Integrate looping background music using an `<audio>` element with a React ref and attempt autoplay on first render, using the provided source URL. Implement a user-interaction fallback so that if autoplay is blocked by the browser, the user can start playback by clicking the CTA button (or an explicit “Play music” control) and the app does not throw runtime errors.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-wire-the-new-valentinessurprise-page-into-the-app-so-it-is-reachable-as-the-primary-screen-either-as-the-default-route-or-as-the-main-rendered-view-without-modifying-any-frontend-immutable-paths-listed-in-the-system-constraints",
+      "title": "Wire the new `ValentinesSurprise` page into the app so it is reachable as the primary screen (either as the default route or as the main rendered view), without modifying any frontend immutable paths listed in the system constraints.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-frontend-has-the-required-dependencies-and-imports-for-framer-motion-and-lucide-react-and-that-the-build-compiles-successfully-with-the-new-page",
+      "title": "Ensure the frontend has the required dependencies and imports for `framer-motion` and `lucide-react` and that the build compiles successfully with the new page.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-coherent-valentine-themed-visual-style-across-spacing-typography-and-component-surfaces-soft-warm-palette-romantic-feel-consistent-with-the-provided-gradient-and-rose-accents-and-use-it-consistently-on-the-page",
+      "title": "Apply a coherent Valentine-themed visual style across spacing, typography, and component surfaces (soft warm palette, romantic feel) consistent with the provided gradient and rose accents, and use it consistently on the page.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-enhance-the-valentinessurprise-cta-button-click-interaction-to-do-something-interesting-and-lovely-in-addition-to-the-existing-music-play-fallback-e-g-trigger-a-celebratory-heart-confetti-style-animation-and-reveal-an-extra-romantic-message-while-keeping-all-user-facing-text-in-english",
+      "title": "Enhance the `ValentinesSurprise` CTA button click interaction to do something \"interesting\" and \"lovely\" in addition to the existing music-play fallback (e.g., trigger a celebratory heart/confetti-style animation and reveal an extra romantic message), while keeping all user-facing text in English.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a Valentine's Surprise page/component (React) with gradient background, animated hero text, love message card, CTA button, footer, and looping background music.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add a lovely/interesting interaction when the CTA button is clicked (e.g., extra animation, message reveal, confetti/hearts, etc.).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "ValentinesSurprise",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,35 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Valentine-themed delight interaction on CTA click",
+  "requirements": [
+    {
+      "id": "REQ-6",
+      "summary": "Add a repeat-safe Valentine-themed delight animation and an extra romantic message reveal on CTA click while preserving existing audio-play fallback behavior and keeping all new text in English.",
+      "acceptanceCriteria": [
+        "When the user clicks the \"Forever Yours ❤️\" button, the UI shows a clearly noticeable, Valentine-themed delight interaction (e.g., floating hearts burst/confetti and/or a smooth animated reveal of an extra love note).",
+        "The existing behavior remains intact: if music is not playing and autoplay was blocked, clicking the CTA still attempts to start audio playback without runtime errors.",
+        "The delight interaction is safe to click repeatedly (no console errors, no runaway timers/DOM growth, and animation elements are cleaned up or capped).",
+        "All newly added user-facing text is in English.",
+        "Changes are limited to editable frontend files (do not modify any paths listed as immutable in system constraints)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ValentineDelightBurst.tsx",
+          "operation": "create",
+          "description": "Create a small, self-contained React component that renders a Valentine-themed burst (floating hearts/confetti-style particles) using CSS animations, with built-in safety caps (max particles per burst / max concurrent bursts) and automatic cleanup after animation completes. Ensure it is click-repeat safe by relying on React state + timeouts that are cleared on unmount. (Verify the component's usage instructions before implementing.)"
+        },
+        {
+          "path": "frontend/src/pages/ValentinesSurprise.tsx",
+          "operation": "modify",
+          "description": "Enhance the CTA click handler to (1) preserve the current music-play fallback when audio is not playing, and (2) trigger the new ValentineDelightBurst effect and smoothly reveal an additional romantic message (English text) below/near the CTA or within the card area. Wire the new component into this page so it is not orphaned. Ensure repeated clicks do not create runaway DOM growth by capping bursts and removing expired ones. Keep the existing audio source URL unchanged. Continue using the existing shadcn-ui Button/Card components for consistent styling and interaction (Verify the component's usage instructions before implementing.)"
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add/extend Tailwind-compatible utility CSS for the delight interaction (keyframes + utility classes) to animate floating hearts/confetti (e.g., rise, drift, fade, scale) and optionally a smooth reveal animation for the extra love note. Keep styles lightweight and ensure the animation classes support cleanup (animationend) and do not require adding timers that could accumulate."
+        }
+      ]
+    }
+  ]
+}

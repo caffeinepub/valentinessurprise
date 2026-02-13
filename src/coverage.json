@@ -1,0 +1,44 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-13T17:30:05.871Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-6",
+        "summary": "Enhance the `ValentinesSurprise` CTA button click interaction to do something \"interesting\" and \"lovely\" in addition to the existing music-play fallback (e.g., trigger a celebratory heart/confetti-style animation and reveal an extra romantic message), while keeping all user-facing text in English.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/ValentineDelightBurst.tsx",
+          "frontend/src/pages/ValentinesSurprise.tsx",
+          "frontend/src/index.css"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ValentineDelightBurst.tsx",
+          "frontend/src/pages/ValentinesSurprise.tsx",
+          "frontend/src/index.css"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/ValentineDelightBurst.tsx",
+    "frontend/src/index.css",
+    "frontend/src/pages/ValentinesSurprise.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

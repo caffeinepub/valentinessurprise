@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.625rem;
+        --background: 0.99 0.01 10;
+        --foreground: 0.145 0 0;
+        --card: 1 0 0;
+        --card-foreground: 0.145 0 0;
+        --popover: 1 0 0;
+        --popover-foreground: 0.145 0 0;
+        --primary: 0.58 0.18 12;
+        --primary-foreground: 0.99 0 0;
+        --secondary: 0.97 0.02 15;
+        --secondary-foreground: 0.205 0 0;
+        --muted: 0.97 0.01 10;
+        --muted-foreground: 0.556 0 0;
+        --accent: 0.95 0.05 350;
+        --accent-foreground: 0.205 0 0;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.922 0.02 15;
+        --input: 0.922 0.02 15;
+        --ring: 0.58 0.18 12;
+        --chart-1: 0.646 0.222 41.116;
+        --chart-2: 0.6 0.118 184.704;
+        --chart-3: 0.398 0.07 227.392;
+        --chart-4: 0.828 0.189 84.429;
+        --chart-5: 0.769 0.188 70.08;
+        --sidebar: 0.985 0 0;
+        --sidebar-foreground: 0.145 0 0;
+        --sidebar-primary: 0.58 0.18 12;
+        --sidebar-primary-foreground: 0.985 0 0;
+        --sidebar-accent: 0.97 0.02 15;
+        --sidebar-accent-foreground: 0.205 0 0;
+        --sidebar-border: 0.922 0.02 15;
+        --sidebar-ring: 0.708 0 0;
+    }
+
+    .dark {
+        --background: 0.145 0 0;
+        --foreground: 0.985 0 0;
+        --card: 0.205 0 0;
+        --card-foreground: 0.985 0 0;
+        --popover: 0.269 0 0;
+        --popover-foreground: 0.985 0 0;
+        --primary: 0.75 0.15 350;
+        --primary-foreground: 0.99 0 0;
+        --secondary: 0.269 0 0;
+        --secondary-foreground: 0.985 0 0;
+        --muted: 0.269 0 0;
+        --muted-foreground: 0.708 0 0;
+        --accent: 0.371 0.08 350;
+        --accent-foreground: 0.985 0 0;
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.205 0 0;
+        --border: 1 0 0 / 10%;
+        --input: 1 0 0 / 15%;
+        --ring: 0.75 0.15 350;
+        --chart-1: 0.488 0.243 264.376;
+        --chart-2: 0.696 0.17 162.48;
+        --chart-3: 0.769 0.188 70.08;
+        --chart-4: 0.627 0.265 303.9;
+        --chart-5: 0.645 0.246 16.439;
+        --sidebar: 0.205 0 0;
+        --sidebar-foreground: 0.985 0 0;
+        --sidebar-primary: 0.75 0.15 350;
+        --sidebar-primary-foreground: 0.985 0 0;
+        --sidebar-accent: 0.269 0 0;
+        --sidebar-accent-foreground: 0.985 0 0;
+        --sidebar-border: 1 0 0 / 10%;
+        --sidebar-ring: 0.439 0 0;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+@layer utilities {
+    .animate-in {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+    
+    .fade-in {
+        animation-name: fadeIn;
+    }
+    
+    .slide-in-from-top-4 {
+        animation-name: slideInFromTop;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideInFromTop {
+        from {
+            transform: translateY(-1rem);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Valentine Delight Animations */
+    .animate-float-heart {
+        animation-name: floatHeart;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes floatHeart {
+        0% {
+            transform: translateY(0) translateX(0) scale(0) rotate(0deg);
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        50% {
+            transform: translateY(-50vh) translateX(calc(var(--drift, 0) * 20px)) scale(1) rotate(180deg);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-100vh) translateX(calc(var(--drift, 0) * 40px)) scale(0.5) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    .animate-secret-reveal {
+        animation: secretReveal 0.8s ease-out forwards;
+    }
+
+    @keyframes secretReveal {
+        0% {
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+        }
+        50% {
+            transform: translateY(-5px) scale(1.02);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+}
